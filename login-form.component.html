@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<title>Google Login Box Test</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('assets/project/background.png'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .google-login-box {
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    padding: 2px; /* Adequate padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: #fff;
+    width: 150px; /* Fixed width */
+    text-align: center; /* Centered text */
+}
+
+/* Style the heading */
+.google-login-box h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 18px; /* Font size for the heading */
+    color: #333; /* Text color */
+    padding-bottom:5px;
+    padding-top:5px;
+}
+   
+ .google-login a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        </style>
+<body>
+    <div class="login-wrapper">
+    <div class="outer box">
+      <form (ngSubmit)="login()" class="login-form">
+            <div class="login-container">
+                <div class="user">
+                    <h2>Login Details</h2>
+                    <div class="google-login-box">
+                 <div class="google-login">
+                     <a href="#" onclick="window.open('(link unavailable) email&response_type=token', 'googleLogin', 'width=500,height=500')">
+                                <img src="assets/project/google.png" alt="Sign in with Google" class="social-signin-img">
+                                <span class="social-login-text">Sign in with Google</span>
+                            </a>
+                    </div>
+                </div>
+                        <div class="input-group">
+                            <label for="username">Username : </label>
+                            <input type="text" id="username" class="input-field" name="username" required>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <label for="password">Password : </label>
+                            <input type="password" id="password" class="input-field" name="password" required>
+                        </div>
+                        <br>
+                        <div class="action">
+                            <!-- Login button -->
+                            <button type="submit" class="login-button">Login</button>
+                            <!-- Forgot password link -->
+                            <div class="forgot-password">
+                                <a href="#" (click)="forgotPassword()">Forgot Password?</a>
+                            </div>
+                            <!-- Social login section -->
+                            <div class="social-login">
+                                <a href="#" onclick="window.open('(link unavailable) email&response_type=token', 'facebookLogin', 'width=500,height=500')">
+                                    <img src="assets/project/facebook.png" class="social-signin-img">
+                                    <span class="social-login-text">Sign in with Facebook</span>
+                                </a>
+                                <a href="#" onclick="window.open('https://api.twitter.com/oauth/authenticate?oauth_token=YOUR_TWITTER_OAUTH_TOKEN', 'twitterLogin', 'width=500,height=500')">
+                                    <img src="assets/project/twitter.png"  class="social-signin-img">
+                                    <span class="social-login-text">Sign in with Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

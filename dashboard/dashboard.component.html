@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 70%;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 2em;
+      color: #343a40;
+    }
+    .main-content h2 {
+      font-size: 1.5em;
+      color: #495057;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-bottom: 500px;
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height:100px;
+    }
+    thead {
+      color: red;
+    }
+    th, td {
+      padding: 60px;
+      text-align: left;
+      border-bottom: 4px solid #dee2e6;
+    }
+    th {
+      font-weight: bold;
+      padding: 20px;
+/* Adjusted padding for consistency */
+border-radius: 5px;
+    }
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+    .status {
+      text-transform: capitalize;
+    }
+    img {
+      max-width: 100px;
+      border-radius: 5px;
+    }
+    .action-colon {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Project Dashboard</h1>
+      <button (click)="createproject()">New Project</button>
+    </div>
+    <div class="form-container" id="formContainer">
+      <div class="form-container">
+      </div>
+    </div>
+    <div class="content">
+      <div class="main-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Project Name</th>
+              <th>Budget</th>
+              <th>Status</th>
+              <th>Completion</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let project of service.projects">
+              <td><img [src]="project.imgsrc" alt="Image"></td>
+             <td>{{ project.name }}</td>
+          <td>${{ project.budget }}</td>
+          <td class="status">{{ project.status }}</td>
+          <td>
+            <div class="completion-container">
+              <div class="progress-bar high" [ngStyle]="{ width: project.completion + '%' }"></div>
+              <span class="completion-text">{{ project.completion }}%</span>
+            </div>
+          </td>
+          <td class="actions">
+            <input id="actionsAssana" type="checkbox">
+            <label class="action-colon" for="actionsAssana" onclick="this.nextElementSibling.style.display='block'">:</label>
+            <div style="display:none">
+              <button (click)="editProject(project)">edit</button>
+             <button (click)="removeProject(project)">delete</button>
+            </div>
+            <div class="action-options">
+            </div>
+          </td>
+        </tr>
+         </tbody>
+         </table>
+         </div>
+         </div>
+         </div>
+         </body>
+         </html>
+         

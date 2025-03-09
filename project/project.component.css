@@ -1,0 +1,141 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling for overall layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Main container styling */
+.container {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  margin-bottom: 30px; /* Space between header and form */
+}
+
+.header h1 {
+  font-size: 5em;
+  color: blue;
+  margin-bottom: 4; /* Ensures no additional margin below the h1 */ 
+  text-align: center;
+}
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of the container */
+  gap: 20px; /* Space between form and image */
+}
+
+/* Form content styling */
+.form-content {
+  display: flex;
+  flex: 1;
+  gap: 20px; /* Space between form and image */
+}
+
+/* Form elements styling */
+.form-elements {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Ensure consistent spacing for form elements */
+form div {
+  width: 100%;
+  margin-bottom: 20px; /* Space between form elements */
+}
+
+/* Label styling */
+form label {
+  font-size: 1em;
+  color: black;
+  margin-bottom: 5px;
+  text-align: left; /* Align label text to the left */
+}
+
+/* Input styling */
+form input {
+  width: 120%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* Button styling */
+form button {
+  font-size: 1em;
+  color: red;
+  padding: 15px;
+  width: 100%;
+  background-color: yellow;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+form button:hover {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+/* Image section styling */
+.image-section {
+  flex: 1; /* Allows the image to take up space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center;
+}
+
+.image-section img {
+  width: 200%;
+  max-width: 380px; /* Adjust maximum width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px;
+}
+form button {
+  font-size: 1em;
+  color: red;
+  padding: 15px;
+  width: 100%;
+  background-color: yellow;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+form button:hover {
+  background-color: #f0ad4e;
+  color: white;
+}
